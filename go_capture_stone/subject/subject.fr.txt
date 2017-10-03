@@ -1,6 +1,7 @@
 Assignment name  : go_capture_stone
 Expected files   : *.c *.h
 Allowed functions: write open read close
+Author           : jmichaud
 --------------------------------------------------------------------------------
 
 Écrire un programme qui prend en paramètres : une grille de go au format 9*9 et
