@@ -1,0 +1,29 @@
+$> cat -e grille.txt
+. o . . o x x x o$
+o x o . . o o o .$
+o o . . . . . . .$
+o . . . o . . . .$
+. . . o x o . . .$
+. . . o x x o . .$
+. o . . o x x o .$
+. x o . . o x x o$
+. o . . . . o x o$
+$> gcc -Wall -Werror -Wextra *.c
+$> ./a.out | cat -e
+error$
+$> ./a.out grille.txt 10 10 | cat -e
+error$
+$> ./a.out grille.txt 1 1 | cat -e
+EMPTY$
+$> ./a.out grille.txt 1 2 | cat -e
+ALIVE$
+$> ./a.out grille.txt 6 1 | cat -e
+DEAD$
+$> ./a.out grille.txt 2 2 | cat -e
+DEAD$
+$> ./a.out grille.txt 1 3 | cat -e
+ALIVE$
+$> ./a.out grille.txt 5 5 | cat -e
+DEAD$
+$> ./a.out grille.txt 2 8 | cat -e
+ALIVE$

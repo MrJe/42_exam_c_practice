@@ -1,0 +1,23 @@
+$> cat grille2.txt
+x o . . . . . . .
+o . . . . . . . .
+. . o . . o x . .
+. . . . . . . . .
+. . . . . . . . x
+. . . . . . x x o
+o o x . . x o o o
+o x o . . . x x x
+x o o . . . . . .
+$> gcc -Wall -Werror -Wextra *.c
+$> ./a.out grille2.txt 1 1
+DEAD
+$> ./a.out grille2.txt 7 3
+ALIVE
+$> ./a.out grille2.txt 5 5
+EMPTY
+$> ./a.out grille2.txt 7 7
+DEAD
+$> ./a.out grille2.txt 2 8
+DEAD
+$> ./a.out grille2.txt 2 9
+ALIVE
