@@ -4,8 +4,8 @@ This repository contains exercises that cannot be added to the examshell, to tes
 ## Exercices
 | Name | Level | Author | Description |
 | --- | --- | --- | --- |
-| go_capture_stone | 5 | jmichaud | Uses all the skills acquired during the pool |
 | brainfuck | 5 | ? | code a brainfuck translator, this exercise was removed from the examshell |
+| go_capture_stone | 5 | jmichaud | Uses all the skills acquired during the pool |
 | without_me | 3 | jmichaud | After fun with flags, fun with pointers |
 | ? | ? | ? | More to come... |
 
