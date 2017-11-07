@@ -9,9 +9,8 @@ do
 		then
 			break
 		fi
-	else
-		echo "Level not available, please enter a level between 0 and 5"
 	fi
+	echo "Level not available, please enter a level between 0 and 5"
 done
 
 if [ -d "made" ]
