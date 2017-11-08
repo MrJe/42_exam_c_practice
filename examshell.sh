@@ -43,11 +43,11 @@ then
 	while true
 	do
 		read response
-		if [ $response == "yes" ]
+		if [ "$response" == "yes" ]
 		then
 			rmdir made
 			break
-		elif [ $response == "no" ]
+		elif [ "$response" == "no" ]
 		then
 			echo "${red}CANCELED${EOC}"
 			exit
