@@ -61,7 +61,7 @@ mkdir made
 
 ###RANDOMIZER
 
-current_level_folder="src/level_$level"
+current_level_folder=".data/level_$level"
 nb_subject=`ls $current_level_folder | wc -w | bc`
 random_subject=`echo $((RANDOM % ${nb_subject} + 1)) | bc`
 let "i = 1"
