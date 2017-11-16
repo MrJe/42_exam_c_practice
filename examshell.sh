@@ -83,9 +83,22 @@ do
 	echo "options: 'grademe' 'logout'"
 done
 
-if [ -f "$data_path/$each_subject/main.c" ]
+echo "${ex_sh}your exercise is evaluated..."
+
+if [ -f "$each_subject/main.c" ]
 then
-	gcc $data_path/$each_subject/main.c made/* -o $src_path/current
+	gcc $each_subject/main.c made/* -o $src_path/current
 else
-	gcc made/* -o 
+	gcc made/* -o $src_path/current
 fi
+
+nb_test=`cat $each_subject/test/__instructions__ | wc -l | bc`
+let "i=0"
+while [ $i -lt $nb_test ]
+do
+	instr="`awk "NR==$i" $each_subject/test/__instructions__`"
+	printf ${instr#./ref}
+	./$src_path/current ${instr#./ref }
+	./$each_subject/ref ${instr#./ref }
+	let "i +=1"
+done

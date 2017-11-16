@@ -2,10 +2,9 @@
 
 int	ft_strlen(char*str);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char *str="coucou";
-
-	printf("%i", ft_strlen(str));
+	if (argc > 1)
+		printf("%i", ft_strlen(argv[1]));
 	return (0);
 }
